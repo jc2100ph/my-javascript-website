@@ -53,9 +53,8 @@ body {
 }
 
 .display_none {
-    display: none !important;
+    display: none !important; 
 }
-
 
 /* Navbar */
 .nav_container {

@@ -52,6 +52,11 @@ body {
     background-color: var(--secondary);
 }
 
+.feature_section_container {
+    display: grid;
+    place-items: center;
+}
+
 .display_none {
     display: none !important;
 }
