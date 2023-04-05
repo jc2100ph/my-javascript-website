@@ -1,0 +1,79 @@
+/* Fonts */
+@font-face {
+    font-family: neutrafaceTextBold;
+    src: url(../font/Neutraface\ Text\ Bold.otf);
+}
+
+@font-face {
+    font-family: neutrafaceTextBook;
+    src: url(../font/Neutraface\ Text\ Book.otf);
+}
+
+@font-face {
+    font-family: neutrafaceTextDemi;
+    src: url(../font/Neutraface\ Text\ Demi.otf);
+}
+
+@font-face {
+    font-family: neutrafaceTextLight;
+    src: url(../font/Neutraface\ Text\ Light.otf);
+}
+
+:root {
+    --primary: #F0DB4F;
+    --secondary: #323330;
+    --tertiary: #DFDFDF;
+    --text: #404040;
+    --comment: #868E96;
+    --purple: #DF3066;
+    --red: #F2180E;
+    --green: #00A67D;
+    --blue: #2E8296;
+    --gold: #C3950C;
+    --nodeGreen: #689F63;
+    --48px: 3rem;
+    --40px: 2.5rem;
+    --36px: 2.25rem;
+    --32px: 2rem;
+    --24px: 1.5rem;
+    --20px: 1.25rem;
+    --16px: 1rem;
+    --15px: 0.938rem;
+}
+
+.about_section_container {
+    display: grid;
+    place-items: center;
+}
+.about_section_container > h1 {
+    font-family: neutrafaceTextBold;
+    color: var(--tertiary);
+    font-size: var(--48px);
+    margin: 50px;
+}
+.about_section_container > p {
+    font-family: neutrafaceTextBook;
+    color: var(--tertiary);
+    font-size: var(--24px);
+    text-align: center;
+    width: 80%;
+}
+.about_section_container > div {
+    margin: 50px auto;
+    width: 55vw;
+    height: 65vh;
+}
+
+@media only screen and (max-width: 660px){
+    .about_section_container {
+        width: 90%;
+    }
+    .about_section_container > p {
+        font-size: var(--20px);
+        width: 100%;
+    }
+    .about_section_container > div {
+        width: 80vw;
+        height: 50vh;
+    }
+}

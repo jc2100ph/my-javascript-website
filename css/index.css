@@ -50,6 +50,7 @@ body {
     display: grid;
     place-items: center;
     background-color: var(--secondary);
+    color: var(--secondary);
 }
 
 .display_none {
@@ -172,6 +173,7 @@ body {
     cursor: pointer;
     color: var(--tertiary);
 }
+
 
 @media only screen and (max-width: 660px){
     .footer_container {

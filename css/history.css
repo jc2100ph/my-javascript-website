@@ -41,22 +41,6 @@
     --15px: 0.938rem;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    display: grid;
-    place-items: center;
-    background-color: var(--secondary);
-}
-
-.display_none {
-    display: none !important; 
-}
-
 /* history section container */
 .history_section_container {
     display: grid;
