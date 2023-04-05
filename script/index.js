@@ -2,6 +2,8 @@
 // navbar
 const navContainer = document.querySelector(".nav_container")
 const navButtonContainer = document.querySelector(".nav_button_container")
+const navButtonContainerButton = document.querySelectorAll(".nav_button_container button")
+const bodyArticle = document.querySelectorAll("body article")
 // burgermenu
 const burgerMenu = document.querySelector(".burger_menu")
 const dropDownMenu = document.querySelector(".drop_down_menu")
@@ -10,6 +12,9 @@ const dropDownMenuButtons = document.querySelectorAll(".drop_down_menu button")
 const programmingLevelExampleButton = document.querySelectorAll(".programming_level_example > :first-child > button")
 const programmingLevelExampleImg = document.querySelector(".programming_level_example > :nth-child(2)")
 const programmingLevelExampleCodes = document.querySelectorAll(".programming_level_example_codes > div")
+// multi paradigm
+const multiParadigmButtons = document.querySelectorAll(".multi_paradigm_scripting_language > :nth-child(4) > :first-child > button")
+const multiParadigmCodeExample = document.querySelectorAll(".multi_paradigm_code_example div")
 
 window.addEventListener("resize", function(){
     const NavSectionDiv = navContainer.querySelectorAll("section div")
@@ -41,6 +46,36 @@ burgerMenu.addEventListener("click",function(){
     dropDownMenu.classList.toggle("drop_down_Animation")
 })
 
+navButtonContainerButton.forEach(function(event){
+    event.addEventListener("click",function(){
+        navButtonContainerButton.forEach(function(button){
+            button.classList.remove("nav_button_container_active")
+            event.classList.add("nav_button_container_active")
+        })
+        if(event.classList.contains("nav_button_container_active") && event.textContent.includes("Features")) {
+            bodyArticle.forEach(function(button){
+                button.classList.add("display_none")
+            })
+            bodyArticle[0].classList.remove("display_none")
+        }else if(event.classList.contains("nav_button_container_active") && event.textContent.includes("History")) {
+            bodyArticle.forEach(function(button){
+                button.classList.add("display_none")
+            })
+            bodyArticle[1].classList.remove("display_none")
+        }else if(event.classList.contains("nav_button_container_active") && event.textContent.includes("Tutorials")) {
+            bodyArticle.forEach(function(button){
+                button.classList.add("display_none")
+            })
+            bodyArticle[2].classList.remove("display_none")
+        }else if(event.classList.contains("nav_button_container_active") && event.textContent.includes("About")) {
+            bodyArticle.forEach(function(button){
+                button.classList.add("display_none")
+            })
+            bodyArticle[3].classList.remove("display_none")
+        }
+    })
+})
+
 programmingLevelExampleButton.forEach(function(event){
     event.addEventListener("click",function(){
         programmingLevelExampleButton.forEach(function(buttons){
@@ -67,9 +102,6 @@ programmingLevelExampleButton.forEach(function(event){
     })
 })
 
-const multiParadigmButtons = document.querySelectorAll(".multi_paradigm_scripting_language > :nth-child(4) > :first-child > button")
-const multiParadigmCodeExample = document.querySelectorAll(".multi_paradigm_code_example div")
-
 multiParadigmButtons.forEach(function(event){
     event.addEventListener("click",function(){
         multiParadigmButtons.forEach(function(button){
@@ -86,4 +118,5 @@ multiParadigmButtons.forEach(function(event){
         }
     })
 })
+
 

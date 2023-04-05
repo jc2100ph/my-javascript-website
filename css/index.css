@@ -92,12 +92,15 @@ body {
     cursor: pointer;
     border-bottom: solid 3px var(--secondary);
 }
-
 .nav_container > section > :last-child > svg {
     width: 40px;
     height: 40px;
 }
-
+.nav_button_container_active {
+    width: 150px;
+    background-color: var(--secondary) !important;
+    color: var(--primary);
+}
 
 /* drop down menu */
 .drop_down_menu {
