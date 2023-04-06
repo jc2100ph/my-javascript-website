@@ -76,6 +76,52 @@ navButtonContainerButton.forEach(function(event){
     })
 })
 
+const dropDownMenuButton = document.querySelectorAll(".drop_down_menu button")
+
+dropDownMenuButton.forEach(function(button){
+    button.addEventListener("click",function(){
+        if(button.textContent.includes("Features")){
+            bodyArticle.forEach(function(pages){
+                pages.classList.add("display_none")
+            })
+            bodyArticle[0].classList.remove("display_none")
+            dropDownMenuButtons.forEach(function(event){
+                event.classList.toggle("display_none")
+            })
+            dropDownMenu.classList.toggle("drop_down_Animation")
+
+        }else if(button.textContent.includes("History")){
+            bodyArticle.forEach(function(pages){
+                pages.classList.add("display_none")
+            })
+            bodyArticle[1].classList.remove("display_none")
+            dropDownMenuButtons.forEach(function(event){
+                event.classList.toggle("display_none")
+            })
+            dropDownMenu.classList.toggle("drop_down_Animation")
+        }else if(button.textContent.includes("Tutorials")){
+            bodyArticle.forEach(function(pages){
+                pages.classList.add("display_none")
+            })
+            dropDownMenuButtons.forEach(function(event){
+                event.classList.toggle("display_none")
+            })
+            dropDownMenu.classList.toggle("drop_down_Animation")
+            bodyArticle[2].classList.remove("display_none")
+        }else if(button.textContent.includes("About")){
+            bodyArticle.forEach(function(pages){
+                pages.classList.add("display_none")
+            })
+            bodyArticle[3].classList.remove("display_none")
+            dropDownMenuButtons.forEach(function(event){
+                event.classList.toggle("display_none")
+            })
+            dropDownMenu.classList.toggle("drop_down_Animation")
+        }
+    })
+})
+
+
 programmingLevelExampleButton.forEach(function(event){
     event.addEventListener("click",function(){
         programmingLevelExampleButton.forEach(function(buttons){
@@ -115,6 +161,26 @@ multiParadigmButtons.forEach(function(event){
         }else if(event.classList.contains("multi_paradigm_active") && event.textContent.includes("Functional Programming")){
             multiParadigmCodeExample[0].classList.toggle("display_none")
             multiParadigmCodeExample[1].classList.toggle("display_none")
+        }
+    })
+})
+
+const lazyLoad = document.querySelectorAll(".lazy_load")
+
+lazyLoad.forEach(function(event){
+    event.addEventListener("click",function(){
+        if(event.classList.contains("js_fcc")) {
+            document.querySelector(".js_fcc").innerHTML = `<iframe width="100%" height="380px" src="https://www.youtube.com/embed/jS4aFq5-91M" title="JavaScript Programming - Full Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+        }else if(event.classList.contains("node_fcc")) {
+            document.querySelector(".node_fcc").innerHTML = `<iframe width="100%" height="380px" src="https://www.youtube.com/embed/Oe421EPjeBE" title="Node.js and Express.js - Full Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+        }else if(event.classList.contains("js_udemy")) {
+            document.querySelector(".js_udemy").innerHTML = `<iframe width="100%" height="380px" src="https://www.youtube.com/embed/vDQ9GZsJkms" title="I&#39;m updating my JavaScript course! Here is a preview!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+        }else if(event.classList.contains("node_udemy")) {
+            document.querySelector(".node_udemy").innerHTML = `<iframe width="100%" height="380px" src="https://www.youtube.com/embed/3unYpFZO4EE" title="Node.js, Express, MongoDB &amp; More: The Complete Bootcamp - Promo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+        }else if(event.classList.contains("other_hater")) {
+            document.querySelector(".other_hater").innerHTML = `<iframe width="100%" height="380px" src="https://www.youtube.com/embed/aXOChLn5ZdQ" title="JavaScript for the Haters" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+        }else if(event.classList.contains("other_game")) {
+            document.querySelector(".other_game").innerHTML = `<iframe width="100%" height="380px" src="https://www.youtube.com/embed/ec8vSKJuZTk" title="Learn JavaScript by Building 7 Games - Full Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
         }
     })
 })
